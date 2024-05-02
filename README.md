@@ -2,6 +2,9 @@
     GraphMETRO: Mitigating Complex Graph Distribution Shifts via Mixture of Aligned Experts
 </h1>
 
+This repo is an early release of the official implementation for GraphMETRO - in reseponse to the great interests from the emails I received.
+
+The training scripts and datasets require additional cleanup before public release; however, the current files should serve as a useful reference and provide a general overview of our methodology.
 
 # Environment
 
