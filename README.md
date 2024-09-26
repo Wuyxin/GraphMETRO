@@ -1,5 +1,5 @@
 <h1 align="left">
-    GraphMETRO: Mitigating Complex Graph Distribution Shifts via Mixture of Aligned Experts
+    GraphMETRO: Mitigating Complex Graph Distribution Shifts via Mixture of Aligned Experts (NeurIPS 2024)
 </h1>
 
 
