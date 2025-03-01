@@ -4,10 +4,10 @@ import torch.nn.functional as F
 
 import wandb
 import os.path as osp
-from gelato.transform import transform_func
-from gelato.train.metric import compute_metric
-from gelato.train.loss import compute_loss
-from gelato.config import cfg
+from graphmetro.transform import transform_func
+from graphmetro.train.metric import compute_metric
+from graphmetro.train.loss import compute_loss
+from graphmetro.config import cfg
 import logging
 import numpy as np
 

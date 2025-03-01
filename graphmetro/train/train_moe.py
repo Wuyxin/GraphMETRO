@@ -5,10 +5,10 @@ import copy
 import wandb
 import os.path as osp
          
-from gelato.train.loss import compute_loss
-from gelato.train.metric import compute_metric
-from gelato.transform import transform_func, get_gt_targets
-from gelato.config import cfg
+from graphmetro.train.loss import compute_loss
+from graphmetro.train.metric import compute_metric
+from graphmetro.transform import transform_func, get_gt_targets
+from graphmetro.config import cfg
 import logging
 import warnings
 
@@ -126,7 +126,6 @@ def test_moe(model,
                 for data in loader:
                     data = data.to(cfg.device)
                     trans_data = copy.deepcopy(data)
-                    # while True:
                     trans_data.x, trans_data.edge_index, trans_data.edge_attr, \
                         trans_data.batch, info = transform_func(shift)(data.x,
                                                                        data.edge_index,

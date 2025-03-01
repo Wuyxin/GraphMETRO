@@ -2,7 +2,6 @@
     GraphMETRO: Mitigating Complex Graph Distribution Shifts via Mixture of Aligned Experts (NeurIPS 2024)
 </h1>
 
-We are working to release the complete code!
 
 ## Reference 
 

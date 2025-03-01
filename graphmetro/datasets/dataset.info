@@ -1,0 +1,145 @@
+MAG:
+Data(
+  num_nodes_dict={
+    author=1134649,
+    field_of_study=59965,
+    institution=8740,
+    paper=736389
+  },
+  edge_index_dict={
+    (author, affiliated_with, institution)=[2, 1043998],
+    (author, writes, paper)=[2, 7145660],
+    (paper, cites, paper)=[2, 5416271],
+    (paper, has_topic, field_of_study)=[2, 7505078]
+  },
+  x_dict={ paper=[736389, 128] },
+  node_year={ paper=[736389, 1] },
+  edge_reltype={
+    (author, affiliated_with, institution)=[1043998, 1],
+    (author, writes, paper)=[7145660, 1],
+    (paper, cites, paper)=[5416271, 1],
+    (paper, has_topic, field_of_study)=[7505078, 1]
+  },
+  y_dict={ paper=[736389, 1] }
+)
+
+----------------------------------------------------------
+DNS:
+HeteroData(
+  domain_node={
+    x=[897635, 10],
+    y=[897635]
+  },
+  ip_node={ x=[275923, 2] },
+  (domain_node, apex, domain_node)={ edge_index=[2, 70290] },
+  (domain_node, resolves, ip_node)={ edge_index=[2, 1061074] },
+  (domain_node, similar, domain_node)={ edge_index=[2, 110334] }
+)
+
+----------------------------------------------------------
+IMDB: 
+HeteroData(
+  movie={
+    x=[4278, 3066],
+    y=[4278],
+    train_mask=[4278],
+    val_mask=[4278],
+    test_mask=[4278]
+  },
+  director={ x=[2081, 3066] },
+  actor={ x=[5257, 3066] },
+  (movie, to, director)={ edge_index=[2, 4278] },
+  (movie, to, actor)={ edge_index=[2, 12828] },
+  (director, to, movie)={ edge_index=[2, 4278] },
+  (actor, to, movie)={ edge_index=[2, 12828] }
+)
+
+----------------------------------------------------------
+
+DBLP:
+HeteroData(
+  author={
+    x=[4057, 334],
+    y=[4057],
+    train_mask=[4057],
+    val_mask=[4057],
+    test_mask=[4057]
+  },
+  paper={ x=[14328, 4231] },
+  term={ x=[7723, 50] },
+  conference={ num_nodes=20 },
+  (author, to, paper)={ edge_index=[2, 19645] },
+  (paper, to, author)={ edge_index=[2, 19645] },
+  (paper, to, term)={ edge_index=[2, 85810] },
+  (paper, to, conference)={ edge_index=[2, 14328] },
+  (term, to, paper)={ edge_index=[2, 85810] },
+  (conference, to, paper)={ edge_index=[2, 14328] }
+)
+
+----------------------------------------------------------
+
+Fake:
+HeteroData(
+  v0={
+    x=[1027, 54],
+    y=[1027]
+  },
+  v1={ x=[1206, 70] },
+  v2={ x=[1124, 70] },
+  (v1, e0, v2)={ edge_index=[2, 12004] },
+  (v0, e0, v0)={ edge_index=[2, 10213] },
+  (v2, e0, v1)={ edge_index=[2, 11181] },
+  (v0, e0, v2)={ edge_index=[2, 10226] },
+  (v1, e0, v0)={ edge_index=[2, 12017] },
+  (v0, e0, v1)={ edge_index=[2, 10236] }
+)
+
+----------------------------------------------------------
+
+LastFM:
+HeteroData(
+  user={ num_nodes=1892 },
+  artist={ num_nodes=17632 },
+  tag={ num_nodes=1088 },
+  (user, to, artist)={
+    train_neg_edge_index=[2, 33294760],
+    val_pos_edge_index=[2, 9283],
+    val_neg_edge_index=[2, 9283],
+    test_pos_edge_index=[2, 18567],
+    test_neg_edge_index=[2, 18567],
+    edge_index=[2, 64984]
+  },
+  (user, to, user)={ edge_index=[2, 25434] },
+  (artist, to, user)={ edge_index=[2, 64984] },
+  (artist, to, tag)={ edge_index=[2, 23253] },
+  (tag, to, artist)={ edge_index=[2, 23253] }
+)
+
+MovieLens:
+HeteroData(
+  movie={ x=[9742, 404] },
+  user={ num_nodes=610 },
+  (user, rates, movie)={
+    edge_index=[2, 100836],
+    edge_label=[100836]
+  }
+)
+----------------------------------------------------------
+AMiner:
+HeteroData(
+  author={
+    y=[246678],
+    y_index=[246678],
+    num_nodes=1693531
+  },
+  venue={
+    y=[134],
+    y_index=[134],
+    num_nodes=3883
+  },
+  paper={ num_nodes=3194405 },
+  (paper, written_by, author)={ edge_index=[2, 9323605] },
+  (author, writes, paper)={ edge_index=[2, 9323605] },
+  (paper, published_in, venue)={ edge_index=[2, 3194405] },
+  (venue, publishes, paper)={ edge_index=[2, 3194405] }
+)
