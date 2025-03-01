@@ -102,7 +102,7 @@ GOOD_SINGLE=noisy_node_feat/add_edge/drop_edge/drop_node/random_subgraph
 GOOD_PAIRED=noisy_node_feat/add_edge/drop_edge/drop_node/random_subgraph/noisy_node_feat-add_edge/noisy_node_feat-drop_edge/noisy_node_feat-random_subgraph/noisy_node_feat-drop_node/add_edge-drop_node/add_edge-random_subgraph/drop_edge-drop_node/drop_edge-random_subgraph/drop_node-random_subgraph
 
 
-DATA_PATH=path/to/store_data
+DATA_PATH=data/
 WARM_UP=0
 MODE=moe
 SEED=0

@@ -45,7 +45,7 @@ def parse_args() -> argparse.Namespace:
                         help='The model path of the trained GNN'
                         )
     parser.add_argument("--wandb_id",
-                        type=str, default='dsp-team', # <your team name here>
+                        type=str, default='<your team name here>', 
                         help='The wandb username for logging'
                         )
     parser.add_argument("--wandb_project",

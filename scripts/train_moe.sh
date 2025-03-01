@@ -85,7 +85,7 @@ single=noisy_node_feat/add_edge/drop_edge/drop_node/random_subgraph
 paired=noisy_node_feat/add_edge/drop_edge/drop_node/random_subgraph/noisy_node_feat-add_edge/noisy_node_feat-drop_edge/noisy_node_feat-random_subgraph/noisy_node_feat-drop_node/random_subgraph-add_edge/random_subgraph-drop_edge
 
 WARM_UP=0
-DATA_PATH=path/to/store_data
+DATA_PATH=data/
 MODE=moe
 SEED=0
 AUGMENT=False
