@@ -21,10 +21,10 @@ Please consider citing our paper:
 
 ## Running the code
 ```
-sh script/train_moe.sh
-sh script/train_moe_good.sh
+sh scripts/train_moe.sh
+sh scripts/train_moe_good.sh
 ```
-Please specify your wandb id in `scripts/train.py` if `use_wandb` is set to True.
+Please specify your own `wandb_id` in `scripts/*.sh` if `use_wandb` is set to True.
 
 
 # Environment

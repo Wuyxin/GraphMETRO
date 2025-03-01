@@ -91,7 +91,7 @@ SEED=0
 AUGMENT=False
 HARD=False
 SHARED=False
-python scripts/train.py --cfg scripts/default.yaml --use_wandb 1 --wandb_exp_name paired-shared \
+python scripts/train.py --cfg scripts/default.yaml --wandb_exp_name paired-shared --wandb_id dsp-team \
  train.use_edge_attr False      train.augment $AUGMENT                 dataset.name $NAME \
  dataset.metric $METRIC         dataset.dir $DATA_PATH                 dataset.task $TASK \
  train.mode $MODE               gnn.layer_type $CONV                   train.batch_size $BS \
